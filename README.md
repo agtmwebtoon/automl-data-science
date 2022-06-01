@@ -1,5 +1,6 @@
 # Application of google playstore analysis
-Dataset from https://github.com/gauthamp10 & https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
+Dataset from https://github.com/gauthamp10  
+You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
 
 ![image](https://user-images.githubusercontent.com/71575861/171389336-ebe6d7c4-f447-4719-9a88-9669bf20f281.png)
 
