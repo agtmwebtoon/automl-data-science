@@ -36,6 +36,17 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 
 
 >> ### 1.2. Data Exploration
+>> ![image](https://user-images.githubusercontent.com/71575861/173819416-0acb4241-eb12-4f92-8034-c37b5f951185.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819466-a9120c3b-5fb6-45ea-b480-5aa9a438c228.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819521-3f247e1b-ea78-4c6a-8f6a-41b7d01e7852.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819579-8f4a4b38-b412-49f6-be46-b8f0ff50ea06.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819619-5db0ff6b-3f6f-407b-b345-04e377acc4fe.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819672-b5aaf2d1-3fa7-4291-864e-3e3d8ddc93bf.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819720-d1ce85f3-0aba-4552-9679-a74808ac1237.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819753-1f3eaa5f-92e7-4a22-8cff-818a6b6b3612.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819780-b64213ef-9c81-42ac-bb8a-a7a2aa9640e2.png)
+>> ![image](https://user-images.githubusercontent.com/71575861/173819827-a6fe4f0b-8e17-4203-8285-92513a1d3f4b.png)
+
 >> ### 1.3. Data Preprocessing
 >> ### 1.4. KNN Regression
 >> ### 1.5. Multiple Linear Regression
