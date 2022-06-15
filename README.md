@@ -28,11 +28,11 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 
 > ## 1. End-to-End Process
 >> ### 1.1. Business Objective
-![image](https://user-images.githubusercontent.com/71575861/173767606-6e6b86bb-e90a-471b-af56-a7c6c697d0c0.png)
-- Today, The mobile market is growing rapidly, and many apps are being released.
-- However, at the same time, apps that do not meet customer needs are disappearing.
-
-- So, we chose this topic to help **the people who create the app** a little bit, to help what they need to have in the app to make it popular.
+>>![image](https://user-images.githubusercontent.com/71575861/173767606-6e6b86bb-e90a-471b-af56-a7c6c697d0c0.png)
+>>- Today, The mobile market is growing rapidly, and many apps are being released.
+>>- However, at the same time, apps that do not meet customer needs are disappearing.
+>>
+>>- So, we chose this topic to help **the people who create the app** a little bit, to help what they need to have in the app to make it popular.
 
 
 >> ### 1.2. Data Exploration
