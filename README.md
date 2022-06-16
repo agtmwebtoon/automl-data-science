@@ -1,56 +1,88 @@
-# Application of google playstore analysis
+# Auto Machine Learning
 Dataset from https://github.com/gauthamp10  
 You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
-
-![image](https://user-images.githubusercontent.com/71575861/171389336-ebe6d7c4-f447-4719-9a88-9669bf20f281.png)
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
 
-
-![image](https://user-images.githubusercontent.com/71575861/171391048-d986ee47-22a1-4911-b80b-a82121babda0.png)
-
-# Index
-
-> #### [1. End-to-End Process](#1-end-to-end-process)
->> #### [1.1. Business Objective](#11-business-objective)
->> #### [1.2. Data Exploration](#12-data-exploration)
->> #### [1.3. Data Preprocessing](#13-data-preprocessing)
->> #### [1.4. KNN Regression](#14-knn-regression)
->> #### [1.5. Multiple Linear Regression](15-multiple-linear-regression)
-> #### [2. Learning Experience](2-learning-experience)
-> #### [3. Open Source SW](3-open-source-sw)
->> #### [3.1. Function definition](31-function-definition)
->> #### [3.2. Architecture](32-architecture)
+## AutoML in one image
 
 
+## About Function
+
+## Example
+
+```python
+def find_best_combination(self):
+
+    # Do feature selection (k = 1 .. size of feature)
+    # Do normalization (StandardScaler, RobustScaler, MinMaxScaler)
+    # Do PCA (explained_variance = 0..1)
+    # find best parameter by using different parameter
+
+    '''
+    find_best_combination
+    @Author: MinHyung Lee
+    @Since: 2022/06/02
+    find best parameter and set best model
+    '''
 
 
-> ## 1. End-to-End Process
->> ### 1.1. Business Objective
->>![image](https://user-images.githubusercontent.com/71575861/173767606-6e6b86bb-e90a-471b-af56-a7c6c697d0c0.png)
->>- Today, The mobile market is growing rapidly, and many apps are being released.
->>- However, at the same time, apps that do not meet customer needs are disappearing.
->>
->>- So, we chose this topic to help **the people who create the app** a little bit, to help what they need to have in the app to make it popular.
+    self.split_dataset("Maximum Installs", False)
+    param_k = np.arange(1, self.X.shape[1])
+    param_scale_method = ['s', 'r', 'm']
+    param_explained_var = np.linspace(0.01, 0.9999, 100)
+    param_model_type = ['l', 'k']
+    result = []
+    param_list = list(itertools.product(param_k, param_scale_method, param_explained_var, param_model_type))
+
+    for (k, scale_method, explained_var, param_model_type) in param_list:
+        X = self.feature_selection(k)
+        X = self.scaler(X, scale_method=scale_method)
+        X = self.pca(X, explained_var=explained_var)
+
+        X_train, X_test, y_train,  y_test = train_test_split(X, self.y, test_size = 0.2, random_state=7777)
+
+        mt = self.model_type(param_model_type)
+        _, score = mt(X_train, X_test, y_train, y_test)
+        result.append(score)
+
+    idx = np.argmin(result)
+    self.score = np.min(result)
+    self.best_param = param_list[idx]
+    self.set_model(self.best_param)
+```
 
 
->> ### 1.2. Data Exploration
->> ![image](https://user-images.githubusercontent.com/71575861/173819416-0acb4241-eb12-4f92-8034-c37b5f951185.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819466-a9120c3b-5fb6-45ea-b480-5aa9a438c228.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819521-3f247e1b-ea78-4c6a-8f6a-41b7d01e7852.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819579-8f4a4b38-b412-49f6-be46-b8f0ff50ea06.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819619-5db0ff6b-3f6f-407b-b345-04e377acc4fe.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819672-b5aaf2d1-3fa7-4291-864e-3e3d8ddc93bf.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819720-d1ce85f3-0aba-4552-9679-a74808ac1237.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819753-1f3eaa5f-92e7-4a22-8cff-818a6b6b3612.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819780-b64213ef-9c81-42ac-bb8a-a7a2aa9640e2.png)
->> ![image](https://user-images.githubusercontent.com/71575861/173819827-a6fe4f0b-8e17-4203-8285-92513a1d3f4b.png)
+## CardStack props
 
->> ### 1.3. Data Preprocessing
->> ### 1.4. KNN Regression
->> ### 1.5. Multiple Linear Regression
-> ## 2. Learning Experience
-> ## 3. Open Source SW
->> ### 3.1. Function definition
->> ### 3.2. Architecture
+<table>
+  <tr>
+    <th>props</th>
+    <th>type</th>
+    <th>description</th>
+    <th>required</th>
+    <th>default</th>
+  </tr>
+  <tr>
+    <td>dataset</td>
+    <td>dataframe</td>
+    <td>raw dataframe for machine learning</td>
+    <td></td>
+    <td>{}</td>
+  </tr>
+  <tr>
+    <td>do_sampling</td>
+    <td></td>
+    <td>Flag that sampling the dataset</td>
+    <td></td>
+    <td>{}</td>
+  </tr>
+  <tr>
+    <td>sample_size</td>
+    <td>int</td>
+    <td>Sample size for random sampling</td>
+    <td></td>
+    <td>{}</td>
+  </tr>
+</table>
