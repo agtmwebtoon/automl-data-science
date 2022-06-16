@@ -10,6 +10,20 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 
 ## About Function
 
+- feed_input()
+- feature_cleaning()
+- split_dataset()
+- find_best_combination()
+- set_model()
+- sampling()
+- feature_selection
+- scaler()
+- pca()
+- model_type()
+- make_subplot_layout()
+- linear_regression()
+- KNN()
+
 ## Example
 
 ```python
