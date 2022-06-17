@@ -1,6 +1,8 @@
 # Auto Machine Learning
-Dataset from https://github.com/gauthamp10  
-You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/agtmwebtoon/automl-data-science/blob/main/AutoML.ipynb#scrollTo=gLIIoFZXEGrf)
+
+
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
@@ -259,3 +261,7 @@ def find_best_combination(self):
         <td>log scaled MSE</td>
     </tr>
 </table>
+
+## Dataset
+Dataset from https://github.com/gauthamp10  
+You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
