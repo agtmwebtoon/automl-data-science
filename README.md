@@ -229,7 +229,7 @@ def find_best_combination(self):
     </tr>
      <tr>
         <td>self</td>
-        <td>DataFrame to find best eighbors and MAE</td>
+        <td>DataFrame to find best eighbors and MSE</td>
     </tr>
     <tr>
         <td>X_train</td>
