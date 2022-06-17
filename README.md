@@ -7,6 +7,7 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 
 ## AutoML in one image
 
+![image](https://user-images.githubusercontent.com/71575861/174263501-a99f1445-e1a5-4704-a4b5-27f3bac7279a.png)
 
 ## About Function
 
@@ -24,24 +25,10 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 - linear_regression()
 - KNN()
 
-## Example
+## Finding best combination code
 
 ```python
 def find_best_combination(self):
-
-    # Do feature selection (k = 1 .. size of feature)
-    # Do normalization (StandardScaler, RobustScaler, MinMaxScaler)
-    # Do PCA (explained_variance = 0..1)
-    # find best parameter by using different parameter
-
-    '''
-    find_best_combination
-    @Author: MinHyung Lee
-    @Since: 2022/06/02
-    find best parameter and set best model
-    '''
-
-
     self.split_dataset("Maximum Installs", False)
     param_k = np.arange(1, self.X.shape[1])
     param_scale_method = ['s', 'r', 'm']
@@ -65,6 +52,23 @@ def find_best_combination(self):
     self.score = np.min(result)
     self.best_param = param_list[idx]
     self.set_model(self.best_param)
+```
+
+## Example of explanation about module 
+
+```python
+
+    # Do feature selection (k = 1 .. size of feature)
+    # Do normalization (StandardScaler, RobustScaler, MinMaxScaler)
+    # Do PCA (explained_variance = 0..1)
+    # find best parameter by using different parameter
+
+    '''
+    find_best_combination
+    @Author: MinHyung Lee
+    @Since: 2022/06/02
+    find best parameter and set best model
+    '''
 ```
 
 
@@ -99,4 +103,35 @@ def find_best_combination(self):
     <td></td>
     <td>{}</td>
   </tr>
+  <tr>
+    <td>unused_column</td>
+    <td>list</td>
+    <td>Features considered useless</td>
+    <td></td>
+    <td>[]</td>
+  </tr>
+  <tr>
+    <td>string_column</td>
+    <td>list</td>
+    <td>Features consisted of String</td>
+    <td></td>
+    <td>[]</td>
+  </tr>
+  <tr>
+    <td>target</td>
+    <td>dataframe</td>
+    <td>Dataset</td>
+    <td></td>
+    <td>{}</td>
+  </tr>
+  <tr>
+    <td>best_param</td>
+    <td>list</td>
+    <td>parameter set calculated by find_best_combination</td>
+    <td></td>
+    <td>[]</td>
+  </tr>  
+  
+  
+    
 </table>
