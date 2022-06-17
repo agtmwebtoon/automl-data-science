@@ -216,7 +216,7 @@ def find_best_combination(self):
         <td>linearRegression model</td>
     </tr> 
     <tr>
-        <td>scoreL</td>
+        <td>score</td>
         <td>log scaled MSE</td>
     </tr>
 </table>
