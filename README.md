@@ -11,19 +11,35 @@ You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-p
 
 ## About Function
 
-- feed_input()
-- feature_cleaning()
-- split_dataset()
-- find_best_combination()
-- set_model()
-- sampling()
-- feature_selection
-- scaler()
-- pca()
-- model_type()
-- make_subplot_layout()
-- linear_regression()
-- KNN()
+- feed_input(): Set object's dataset  
+      Also can random sampling by do_sampling option
+
+- feature_cleaning(): Drop unused column  
+        &nbsp;Encode string value using ordinalEncoder  
+        &nbsp;Find Na value and fill it my df.mean
+
+- split_dataset(): Split dataset
+
+- find_best_combination(): Find best parameter and set best model
+
+- set_model(): Set best model by using best parameter
+
+- sampling(): Do random sampling
+
+- feature_selection: Select best feature using selectKBest and scoring option is r_regression
+
+- scaler(): Return **Normalized feature**
+
+- pca(): Calculate PCA -> Return **Feature reduction by PCA**
+
+- model_type(): Return **train method**
+
+- make_subplot_layout(): Plot each features by subplots
+
+- linear_regression(): Calculate MSE -> return **best linearRegreesion model** & **score of L logscale MSE**
+
+- KNN(): Find best neighbors by using GridSearch  
+   &nbsp;Scoring method is negative MAE -> return **best knn model** & **score of log scaled MSE**
 
 ## Finding best combination code
 
@@ -130,28 +146,20 @@ def find_best_combination(self):
     <td>parameter set calculated by find_best_combination</td>
     <td></td>
     <td>[]</td>
-  </tr>  
-  
-  
+  </tr> 
+  <tr>
+    <td>scale_method</td>
+    <td>string</td>
+    <td>s: for standard scaler, r: for robustscaler, m: for minmaxscaler</td>
+    <td></td>
+    <td>"s"</td>
+  </tr>
+  <tr>
+    <td>train_method</td>
+    <td>string</td>
+    <td>l: for linear_regression, k: for KNN_regression</td>
+    <td></td>
+    <td>""</td>
+  </tr>
     
 </table>
-```
-
-### feature_cleaning(self, unused_column=[], string_column=[])
-<table>
-    <tr>
-        <th>Parameter</th>
-    </tr>
-    <tr>
-        <td>self</td>
-        <td>DataFrame to clean and encode</td>
-    </tr>
-    <tr>
-        <td>unused_columnn</td>
-        <td>List of features considered useless</td>
-    </tr>
-    <tr>
-        <td>string_column</td>
-        <td>List of features considered of String</td>
-    </tr>
-    
