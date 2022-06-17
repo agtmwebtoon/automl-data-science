@@ -256,6 +256,6 @@ def find_best_combination(self):
     </tr> 
     <tr>
         <td>scoreL</td>
-        <td>log scaled ME</td>
+        <td>log scaled MSE</td>
     </tr>
 </table>
