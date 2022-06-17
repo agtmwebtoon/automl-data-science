@@ -135,3 +135,22 @@ def find_best_combination(self):
   
     
 </table>
+
+### feature_cleaning(self, unused_column=[], string_column=[])
+<table>
+    <tr>
+        <th>Parameter</th>
+    </tr>
+    <tr>
+        <td>self</td>
+        <td>DataFrame to clean and encode</td>
+    </tr>
+    <tr>
+        <td>unused_columnn</td>
+        <td>List of features considered useless</td>
+    </tr>
+    <tr>
+        <td>string_column</td>
+        <td>List of features considered of String</td>
+    </tr>
+    
