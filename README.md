@@ -217,8 +217,45 @@ def find_best_combination(self):
     </tr> 
     <tr>
         <td>scoreL</td>
-        <td>logscale MSE</td>
+        <td>log scaled MSE</td>
     </tr>
 </table>
     
     
+### KNN(self, X_train, X_test, y_train, y_test)
+<table>
+    <tr>
+        <th>Parameter</th>
+    </tr>
+     <tr>
+        <td>self</td>
+        <td>DataFrame to find best eighbors and MAE</td>
+    </tr>
+    <tr>
+        <td>X_train</td>
+        <td>DatFrame to train</td>
+    </tr>
+    <tr>
+        <td>X_test</td>
+        <td>DatFrame to test</td>
+    </tr>
+    <tr>
+        <td>y_train</td>
+        <td>Target DatFrame to train</td>
+    </tr>
+    <tr>
+        <td>y_test</td>
+        <td>Target DatFrame to test</td>
+    </tr>
+    <tr>
+        <th>Return</th>
+    </tr>
+        <tr>
+        <td>Model</td>
+        <td>knn model</td>
+    </tr> 
+    <tr>
+        <td>scoreL</td>
+        <td>log scaled MSE</td>
+    </tr>
+</table>
