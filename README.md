@@ -262,6 +262,27 @@ def find_best_combination(self):
     </tr>
 </table>
 
+## Guideline
+### - To add an algorithm
+> 1. Clone the open source from the git hub and receive it.
+> 2. Add the desired algorithm. Since various algorithms are already defined in AutoML.ipynb, they are converted to the following format.
+> def new algorithms (self, X_train, X_test, y_train, y_test):
+> .crystal
+> 3. If you have modified it, you can upload the modified file to git through the git add command and check it through the status command.
+
+### - How to Visualize
+> 1. AutoML.ipynb provides various visualization libraries such as seaborn matplotlib.
+> 2. Therefore, if you want to visualize, you can use various functions such as scatterplot, histogram, boxplot, etc.
+> 3. After learning, you can view data errors by using the train and test datasets.
+> Ex. Plt.scatter(X_test,y_test)
+
+### - Sampling Method
+> 1. AutoML.ipynb also provides a function of random sampling when the amount of data is enormous.
+> 2. Randomly sample 20,000 datasets from the original dataset, and you can modify the sample_size shown below as many as you want.
+> Ex. If you want to have 40,000 data, you can put sample_size=40000.
+> ![image](https://user-images.githubusercontent.com/71575861/174481154-303ff996-c95c-4c58-91fe-0e1f5211042f.png)
+
+
 ## Dataset
 Dataset from https://github.com/gauthamp10  
 You can also find dataset at https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps?resource=download
