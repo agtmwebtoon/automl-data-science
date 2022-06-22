@@ -90,7 +90,7 @@ def find_best_combination(self):
 ```
 
 
-## CardStack props
+## props
 
 <table>
   <tr>
